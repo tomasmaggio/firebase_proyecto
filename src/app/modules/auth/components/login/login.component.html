@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row auth">
+  <h1><b>Inciar sesión</b> <i class="material-icons" style="size: 200px; margin-left: 10px;"> account_circle</i></h1>
+          <mat-form-field appearance="fill">
+              <mat-label>Ingrese su nombre de usuario</mat-label>
+              <input matInput placeholder="ejemplo@gmail.com">
+              <mat-icon matSuffix>account_circle</mat-icon>
+          </mat-form-field>
+      
+      <br>
+      <mat-form-field>
+          <mat-label>Ingrese su contraseña</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'">
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+      </mat-form-field>
+      
+  
+      <div>
+          <button class="boton" mat-raised-button>Inciar sesión</button>
+      </div>
+      
+  </div>
+</div>

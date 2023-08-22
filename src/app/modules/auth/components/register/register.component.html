@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row auth">
+    <h1><b>Registrarse</b> <i class="material-icons" style="size: 200px; margin-top: 0px; margin-left: 10px;"> supervisor_account</i></h1>
+            <mat-form-field appearance="fill">
+                <mat-label>Ingrese un nombre de usuario</mat-label>
+                <input [(ngModel)]="usuarios.nombre" matInput type="text" required placeholder="ejemplo@gmail.com">
+                <mat-icon matSuffix>account_circle</mat-icon>
+            </mat-form-field>
+        
+        <br>
+        <mat-form-field>
+            <mat-label>Ingrese una contraseña</mat-label>
+            <input matInput [(ngModel)]="usuarios.contrasena"  [type]="hide ? 'password' : 'text'" #input minlength="6" required>
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            <mat-hint align="start">Mínimo 6/{{input.value.length}}</mat-hint>
+        </mat-form-field>
+        
+    
+        <div>
+            <button class="boton" mat-raised-button (click)="registrarse()">Registrarse</button>
+        </div>
+        
+    </div>
+</div>

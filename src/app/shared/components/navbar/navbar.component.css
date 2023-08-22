@@ -1,0 +1,18 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  mat-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4vh; 
+
+    transform: translate(-10%, -10%);
+
+  }
+
+  mat-toolbar{
+    background-color: #103f79;
+    color: #f3b229;
+  }

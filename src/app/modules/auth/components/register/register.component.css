@@ -1,0 +1,21 @@
+.container{
+    display: flex;
+    padding: 110px;
+    text-align: center;
+    justify-content: center ;
+}
+
+.boton{
+    width: 10cm;
+    height: 50px;
+    padding: 10px;
+    font-size: large;
+    border-radius: 12px;
+    background-color:  #103f79;
+    color: #f3b229;
+    
+}
+
+.material-icons{
+    
+}

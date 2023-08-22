@@ -1,0 +1,19 @@
+.example-card {
+    max-width: 400px;
+    padding: 10px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://i.pinimg.com/736x/cf/85/d8/cf85d872c12828df3361c4661709eade--funny-dachshund-dachshund-love.jpg');
+    background-size: cover;
+    transform: scale(1.5);
+
+  }
+  
+  .container{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+  }
+
+  
