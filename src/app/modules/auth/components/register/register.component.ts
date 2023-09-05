@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../../services/auth.service'; //nuevo servicio
 import { Usuario } from 'src/app/models/usuario';
-
 import { FirestoreService } from 'src/app/shared/services/firestore.service';
+
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-register',
@@ -15,7 +17,9 @@ export class RegisterComponent {
   usuarios: Usuario = {
     uid: '',
     nombre: '',
-    contrasena:''
+    email:'',
+    contrasena:'',
+    rol: '',
   }
 
   uid = '';
@@ -23,22 +27,27 @@ export class RegisterComponent {
   //creamos una nueva colección para los usuarios
   coleccionUsuarios: Usuario[] = []
 
-  constructor(public servicioAuth: AuthService,
-    public servicioFirestore:FirestoreService){
+  constructor(
+    public servicioAuth: AuthService,
+    public servicioFirestore:FirestoreService,
+    public router:Router,
+    ){
     
   }
 
   //tomamos nuevos registros y mostramos los resultados
   async registrarse(){
     const credenciales = {
-      nombre: this.usuarios.nombre,
+      email: this.usuarios.email,
       contrasena: this.usuarios.contrasena
     };
 
     
-    const res = await this.servicioAuth.registrar(credenciales.nombre, credenciales.contrasena)
+    const res = await this.servicioAuth.registrar(credenciales.email, credenciales.contrasena)
     .then(res => {
       alert("Se ha agregado un nuevo usuario con exito")
+
+      this.router.navigate(['/inicio']);
     })
     .catch(error => alert("Hubo un error al cargar el usuario (\n"+error)
     );

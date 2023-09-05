@@ -1,11 +1,30 @@
 <div class="container">
     <div class="row auth">
     <h1><b>Registrarse</b> <i class="material-icons" style="size: 200px; margin-top: 0px; margin-left: 10px;"> supervisor_account</i></h1>
+            
+    
             <mat-form-field appearance="fill">
                 <mat-label>Ingrese un nombre de usuario</mat-label>
-                <input [(ngModel)]="usuarios.nombre" matInput type="text" required placeholder="ejemplo@gmail.com">
+                <input [(ngModel)]="usuarios.nombre" matInput type="text" required placeholder="Pancho">
+            </mat-form-field>
+    
+            <mat-form-field appearance="fill">
+                <mat-label>Ingrese un mail</mat-label>
+                <input [(ngModel)]="usuarios.email" matInput type="text" required placeholder="ejemplo@gmail.com">
                 <mat-icon matSuffix>account_circle</mat-icon>
             </mat-form-field>
+
+
+            <mat-form-field>
+                <mat-label>Select</mat-label>
+                <mat-select [(ngModel)]="usuarios.rol">
+                  <mat-option value="adm">Administrador</mat-option>
+                  <mat-option value="vis">Visitante</mat-option>
+                </mat-select>   
+            </mat-form-field>
+
+
+              
         
         <br>
         <mat-form-field>
@@ -16,6 +35,8 @@
             </button>
             <mat-hint align="start">Mínimo 6/{{input.value.length}}</mat-hint>
         </mat-form-field>
+
+
         
     
         <div>
