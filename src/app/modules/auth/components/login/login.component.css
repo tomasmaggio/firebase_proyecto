@@ -15,3 +15,14 @@
     color: #103f79;
     
 }
+
+.botons{
+    width: 10cm;
+    height: 50px;
+    padding: 10px;
+    font-size: large;
+    border-radius: 12px;
+    background-color: #103f79;
+    color: #f3b229;
+    
+}

@@ -33,5 +33,10 @@ iniciarSesion(email:string, contrasena:string){
       return user.uid;
     }
   }
+
+  cerrarSesion(){
+    return this.auth.signOut();
+  }
+
 }
 

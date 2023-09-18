@@ -3,6 +3,7 @@ import { AuthService } from '../../services/auth.service'; //la funcion iniciar 
 import { FirestoreService } from 'src/app/shared/services/firestore.service'; //nos trae los datos del firebase
 import { Usuario } from 'src/app/models/usuario'; //interfaz del usuario
 import { Router } from '@angular/router'; //navegacion
+import { async } from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -41,7 +42,20 @@ export class LoginComponent {
 
     .catch(error =>{
       alert("Hubo un error al iniciar sesión: (\n "+error);
+
     })
+
+    
+
   }
 
+  async salir(){
+    const res= await this.servicioAuth.cerrarSesion()
+    .then(res=>{
+      alert("Sesión cerrada correctamente");
+      console.log(res);
+
+      this.router.navigate(['/inicio']);
+    })
+  }
 }
