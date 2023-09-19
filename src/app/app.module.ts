@@ -12,11 +12,17 @@ import { SharedModule } from './shared/shared.module';
 import { enviroments } from 'src/enviroments/enviroments';
 import { AngularFireModule } from '@angular/fire/compat' //Importación de firestore (la base de datos)
 import { AngularFireAuthModule} from '@angular/fire/compat/auth' // Importación de la autentificación
-import { AngularFireStorageModule} from '@angular/fire/compat/storage' //Importacion de storage (imagenes, etc.)
+import { AngularFireStorageModule} from '@angular/fire/compat/storage';
+import { IndumentariaComponent } from './models/productos/pages/indumentaria/indumentaria.component';
+import { AbrigosComponent } from './models/productos/pages/abrigos/abrigos.component';
+import { AccesoriosComponent } from './models/productos/pages/accesorios/accesorios.component' //Importacion de storage (imagenes, etc.)
 
 @NgModule({
   declarations: [
     AppComponent,
+    IndumentariaComponent,
+    AbrigosComponent,
+    AccesoriosComponent,
   ],
   imports: [
     BrowserModule,

@@ -6,7 +6,19 @@
 
    <button mat-button routerLink="/inicio">Inicio</button>
    <button mat-button routerLink="/nosotros">Nosotros</button>
+   
+   <mat-menu #animals="matMenu">
+    <button mat-menu-item routerLink="/productos">Todos</button>
+
+    <button mat-menu-item routerLink="/indumentaria">Indumentaria</button>
+    <button mat-menu-item routerLink="/abrigos">Abrigos</button>
+    <button mat-menu-item routerLink="/accesorios">Accesorios</button>
+
+  </mat-menu>
+  
    <button mat-button routerLink="/login">Login</button>
+   <button mat-button routerLink="/admin">Administrador</button>
+
 
 
 
@@ -14,6 +26,7 @@
    <button mat-icon-button routerLink="/register">
      <mat-icon>person</mat-icon>
    </button>
+   
    
 </mat-toolbar>
 
